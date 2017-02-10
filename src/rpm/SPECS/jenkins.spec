@@ -1,8 +1,8 @@
 # rpmbuild -bb SPECS/jenkins.spec --define '_topdir '`pwd` -v --clean
 
 Name:       jenkins
-Version:    2.44
-Release:    33.g75d63d9.%{os_release}
+Version:    2.45
+Release:    %{releaseModule}
 Summary:    An extendable open source continuous integration server
 Group:      develenv
 License:    http://creativecommons.org/licenses/by/3.0/
@@ -11,11 +11,12 @@ URL:        http://jenkins-ci.org/
 Source0:    %{package_name}.war
 BuildArch:  noarch
 BuildRoot:  %{_topdir}/BUILDROOT
-Requires:   ss-develenv-user > 33
+Requires:   ss-develenv-user >= 33 httpd jdk mod_proxy_html
 Vendor:     softwaresano
 
 %define package_name jenkins
-%define target_dir  /
+%define target_dir /
+%define jenkins_home /home/develenv/app/jenkins
 
 %description
 Jenkins is an award-winning application that monitors executions of repeated jobs,
@@ -38,26 +39,28 @@ and makes it easy for you to notice when something is wrong.
 # CLEAN
 # ------------------------------------------------------------------------------
 %clean
-[ %{buildroot} != "/" ] && rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 # ------------------------------------------------------------------------------
 # INSTALL
 # ------------------------------------------------------------------------------
 %install
-%{__mkdir_p} %{buildroot}/%{target_dir}
-cp -R %{source_dir}/*  %{buildroot}/%{target_dir}
-
+%{__mkdir_p} $RPM_BUILD_ROOT/%{target_dir} $RPM_BUILD_ROOT/%{jenkins_home}
+printf "%{version}" >$RPM_BUILD_ROOT/%{jenkins_home}/jenkins.install.InstallUtil.lastExecVersion
+cp -R %{_sourcedir}/* $RPM_BUILD_ROOT/%{target_dir}
 # ------------------------------------------------------------------------------
 # PRE-INSTALL
 # ------------------------------------------------------------------------------
 %pre
-# Deleting jenkins dir on tomcat to assure the update of jenkins
-rm -Rf %{target_dir}
 # ------------------------------------------------------------------------------
 # POST-INSTALL
 # ------------------------------------------------------------------------------
 %post
 /sbin/chkconfig --add jenkins
+if [[ "$(sestatus -b|awk '{print $1$2}'|grep 'httpd_can_network_connectoff')" != "" ]]; then \
+  setsebool -P httpd_can_network_connect true
+fi
+
 # ------------------------------------------------------------------------------
 # PRE-UNINSTALL
 # ------------------------------------------------------------------------------
@@ -76,10 +79,15 @@ if [ "$1" -ge 1 ]; then
 fi
 %files
 %defattr(-,develenv,develenv,-)
-%{target_dir}/var/*
+%{jenkins_home}
+%{target_dir}/var/log/jenkins
+%{target_dir}/var/cache/jenkins
+%{target_dir}/var/lib/jenkins
+%{target_dir}/var/lib/jenkins
 %defattr(-,root,root,-)
-%{target_dir}/etc/*
-%{target_dir}/usr/*
-
-%changelog
+%{target_dir}/etc/init.d/jenkins
+%{target_dir}/etc/logrotate.d/jenkins
+%{target_dir}/etc/sysconfig/jenkins
+%{target_dir}/usr/lib/jenkins/*
+%{target_dir}/etc/httpd/conf.d/*
 

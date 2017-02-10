@@ -7,7 +7,7 @@
 # Directory where Jenkins store its configuration and working
 # files (checkouts, build reports, artifacts, ...).
 #
-JENKINS_HOME="/var/lib/jenkins"
+JENKINS_HOME="/home/develenv/app/jenkins"
 
 ## Type:        string
 ## Default:     ""
@@ -26,7 +26,7 @@ JENKINS_JAVA_CMD=""
 # Be careful when you change this, as you need to update
 # permissions of $JENKINS_HOME and /var/log/jenkins.
 #
-JENKINS_USER="jenkins"
+JENKINS_USER="develenv"
 
 ## Type:        string
 ## Default: "false"
@@ -141,4 +141,4 @@ JENKINS_HANDLER_IDLE="20"
 # Pass arbitrary arguments to Jenkins.
 # Full option list: java -jar jenkins.war --help
 #
-JENKINS_ARGS=""
+JENKINS_ARGS="--prefix=/jenkins"
