@@ -1,8 +1,8 @@
 # rpmbuild -bb SPECS/jenkins.spec --define '_topdir '`pwd` -v --clean
-
+%define jenkins_version 2.46
 Name:       jenkins
-Version:    2.45
-Release:    %{releaseModule}
+Version:    %{versionModule}
+Release:    %{jenkins_version}.%{releaseModule}
 Summary:    An extendable open source continuous integration server
 Group:      develenv
 License:    http://creativecommons.org/licenses/by/3.0/
@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 # ------------------------------------------------------------------------------
 %install
 %{__mkdir_p} $RPM_BUILD_ROOT/%{target_dir} $RPM_BUILD_ROOT/%{jenkins_home}
-printf "%{version}" >$RPM_BUILD_ROOT/%{jenkins_home}/jenkins.install.InstallUtil.lastExecVersion
+printf "%{jenkins_version}" >$RPM_BUILD_ROOT/%{jenkins_home}/jenkins.install.InstallUtil.lastExecVersion
 cp -R %{_sourcedir}/* $RPM_BUILD_ROOT/%{target_dir}
 # ------------------------------------------------------------------------------
 # PRE-INSTALL
