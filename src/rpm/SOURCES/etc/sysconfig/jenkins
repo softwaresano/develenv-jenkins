@@ -44,7 +44,7 @@ JENKINS_USER="develenv"
 #
 # Options to pass to java when running Jenkins.
 #
-JENKINS_JAVA_OPTIONS="-Djava.awt.headless=true"
+JENKINS_JAVA_OPTIONS="-Djava.awt.headless=true -Dhudson.model.DirectoryBrowserSupport.CSP=''"
 
 ## Type:        integer(0:65535)
 ## Default:     8080
