@@ -85,6 +85,9 @@ fi
 %files
 %defattr(-,develenv,develenv,-)
 %{jenkins_home}
+%dir %{jenkins_home}/jobs/
+%dir %{jenkins_home}/users/
+%dir %{jenkins_home}/workflow-libs/
 %{target_dir}/var/log/jenkins
 %{target_dir}/var/cache/jenkins
 %{target_dir}/var/lib/jenkins
