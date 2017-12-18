@@ -1,5 +1,5 @@
 # rpmbuild -bb SPECS/jenkins.spec --define '_topdir '`pwd` -v --clean
-%define jenkins_version 2.94
+%define jenkins_version 2.95
 Name:       jenkins
 Version:    %{versionModule}
 Release:    %{jenkins_version}.%{releaseModule}
