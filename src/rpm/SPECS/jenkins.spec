@@ -98,4 +98,5 @@ fi
 %{target_dir}/etc/sysconfig/jenkins
 %{target_dir}/usr/lib/jenkins/*
 %{target_dir}/etc/httpd/conf.d/*
+%config(noreplace) /etc/sysconfig/jenkins
 
