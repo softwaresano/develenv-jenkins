@@ -75,13 +75,6 @@ if [ "$1" = 0 ] ; then
     /sbin/service jenkins stop > /dev/null 2>&1
     /sbin/chkconfig --del jenkins
 fi
-# ------------------------------------------------------------------------------
-# POST-UNINSTALL
-# ------------------------------------------------------------------------------
-%postun
-if [ "$1" -ge 1 ]; then
-    /sbin/service jenkins condrestart > /dev/null 2>&1
-fi
 %files
 %defattr(-,develenv,develenv,-)
 %{jenkins_home}
