@@ -1,5 +1,5 @@
 # rpmbuild -bb SPECS/jenkins.spec --define '_topdir '`pwd` -v --clean
-%define jenkins_version 2.225
+%define jenkins_version 2.228
 Name:       jenkins
 Version:    %{versionModule}
 Release:    %{jenkins_version}.%{releaseModule}
@@ -12,7 +12,7 @@ URL:        http://jenkins-ci.org/
 Source0:    %{package_name}.war
 BuildArch:  noarch
 BuildRoot:  %{_topdir}/BUILDROOT
-Requires:   ss-develenv-user >= 33 httpd jdk mod_proxy_html
+Requires:   ss-develenv-user >= 33 httpd java-11-openjdk mod_proxy_html
 Vendor:     softwaresano
 
 %define package_name jenkins
