@@ -8,7 +8,7 @@ mkdir -p $jenkins_output_dir $jenkins_war_dir
 curl -f -L -k http://mirrors.jenkins.io/war/latest/jenkins.war >$jenkins_war_dir/jenkins.war || exit 1
 
 rm -Rf $jenkins_output_dir/*.jpi
-for i in $(ls $plugins_dir/*.jpi); do 
+for i in $(cat plugins.list); do 
   plugin=$(basename $i)
   plugin_name=${plugin/.jpi/}
   echo $plugin_name
