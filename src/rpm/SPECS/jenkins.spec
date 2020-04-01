@@ -41,7 +41,7 @@ and makes it easy for you to notice when something is wrong.
 # ------------------------------------------------------------------------------
 %clean
 rm -rf $RPM_BUILD_ROOT
-
+ --output-format=parseable|egrep -E ": [F[0-9]{4}.*]" |tee $(PYLINT_REPORT) && [[ "$${PIPESTATUS[0]}" != "0" ]]
 # ------------------------------------------------------------------------------
 # INSTALL
 # ------------------------------------------------------------------------------
@@ -49,6 +49,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__mkdir_p} $RPM_BUILD_ROOT/%{target_dir} $RPM_BUILD_ROOT/%{jenkins_home}
 %{__mkdir_p} $RPM_BUILD_ROOT/%{jenkins_home}/jobs/ $RPM_BUILD_ROOT/%{jenkins_home}/users/
 %{__mkdir_p} $RPM_BUILD_ROOT/%{jenkins_home}/workflow-libs
+%{__mkdir_p} $RPM_BUILD_ROOT/var/log/jenkins
+%{__mkdir_p} $RPM_BUILD_ROOT/var/cache/jenkins
+%{__mkdir_p} $RPM_BUILD_ROOT/var/lib/jenkins
+
 
 
 printf "%{jenkins_version}" >$RPM_BUILD_ROOT/%{jenkins_home}/jenkins.install.InstallUtil.lastExecVersion
@@ -83,7 +87,6 @@ fi
 %dir %{jenkins_home}/workflow-libs/
 %{target_dir}/var/log/jenkins
 %{target_dir}/var/cache/jenkins
-%{target_dir}/var/lib/jenkins
 %{target_dir}/var/lib/jenkins
 %defattr(-,root,root,-)
 %{target_dir}/etc/init.d/jenkins
