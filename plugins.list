@@ -42,6 +42,7 @@ build-timeout.jpi
 buildtriggerbadge.jpi
 build-user-vars-plugin.jpi
 build-with-parameters.jpi
+checks-api.jpi
 checkstyle.jpi
 chucknorris.jpi
 cloudbees-bitbucket-branch-source.jpi
@@ -145,6 +146,7 @@ multi-module-tests-publisher.jpi
 naginator.jpi
 nodejs.jpi
 nodelabelparameter.jpi
+okhttp-api.jpi
 pam-auth.jpi
 Parameterized-Remote-Trigger.jpi
 parameterized-trigger.jpi
@@ -187,6 +189,7 @@ show-build-parameters.jpi
 sidebar-link.jpi
 simple-theme-plugin.jpi
 sloccount.jpi
+snakeyaml-api.jpi
 sonar.jpi
 sounds.jpi
 sse-gateway.jpi
@@ -223,3 +226,4 @@ workflow-step-api.jpi
 workflow-support.jpi
 ws-cleanup.jpi
 xunit.jpi
+
