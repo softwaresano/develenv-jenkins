@@ -18,7 +18,6 @@ blueocean-core-js.jpi
 blueocean-dashboard.jpi
 blueocean-display-url.jpi
 blueocean-events.jpi
-blueocean-executor-info.jpi
 blueocean-github-pipeline.jpi
 blueocean-git-pipeline.jpi
 blueocean-i18n.jpi
@@ -93,7 +92,6 @@ git-client.jpi
 github-api.jpi
 github-branch-source.jpi
 github.jpi
-github-organization-folder.jpi
 github-pr-coverage-status.jpi
 git.jpi
 git-parameter.jpi
@@ -124,7 +122,6 @@ job-import-plugin.jpi
 jquery3-api.jpi
 jquery-detached.jpi
 jquery.jpi
-jquery-ui.jpi
 jsch.jpi
 jswidgets.jpi
 junit.jpi
@@ -158,7 +155,6 @@ pipeline-graph-analysis.jpi
 pipeline-input-step.jpi
 pipeline-milestone-step.jpi
 pipeline-model-api.jpi
-pipeline-model-declarative-agent.jpi
 pipeline-model-definition.jpi
 pipeline-model-extensions.jpi
 pipeline-rest-api.jpi
@@ -226,4 +222,3 @@ workflow-step-api.jpi
 workflow-support.jpi
 ws-cleanup.jpi
 xunit.jpi
-
