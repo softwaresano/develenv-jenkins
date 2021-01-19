@@ -41,7 +41,6 @@ buildtriggerbadge.jpi
 build-user-vars-plugin.jpi
 build-with-parameters.jpi
 checks-api.jpi
-checkstyle.jpi
 chucknorris.jpi
 cloudbees-bitbucket-branch-source.jpi
 cloudbees-folder.jpi
