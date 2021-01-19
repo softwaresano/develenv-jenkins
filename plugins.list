@@ -81,7 +81,6 @@ extended-read-permission.jpi
 external-monitor-job.jpi
 extra-columns.jpi
 favorite.jpi
-findbugs.jpi
 font-awesome-api.jpi
 forensics-api.jpi
 ghprb.jpi
@@ -162,7 +161,6 @@ pipeline-utility-steps.jpi
 plain-credentials.jpi
 plot.jpi
 plugin-util-api.jpi
-pmd.jpi
 poll-mailbox-trigger-plugin.jpi
 popper-api.jpi
 project-description-setter.jpi
@@ -191,7 +189,6 @@ ssh-credentials.jpi
 ssh-slaves.jpi
 structs.jpi
 subversion.jpi
-tasks.jpi
 template-workflows.jpi
 text-finder.jpi
 thinBackup.jpi
@@ -203,7 +200,6 @@ validating-string-parameter.jpi
 variant.jpi
 view-job-filters.jpi
 violations.jpi
-warnings.jpi
 warnings-ng.jpi
 windows-slaves.jpi
 workflow-aggregator.jpi
