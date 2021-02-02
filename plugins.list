@@ -80,17 +80,14 @@ extra-columns.jpi
 favorite.jpi
 font-awesome-api.jpi
 forensics-api.jpi
-ghprb.jpi
 git-client.jpi
 github-api.jpi
 github-branch-source.jpi
 github.jpi
-github-pr-coverage-status.jpi
 git.jpi
 git-parameter.jpi
 git-server.jpi
 global-build-stats.jpi
-googleanalytics.jpi
 gradle.jpi
 gravatar.jpi
 greenballs.jpi
@@ -202,3 +199,4 @@ workflow-step-api.jpi
 workflow-support.jpi
 ws-cleanup.jpi
 xunit.jpi
+
