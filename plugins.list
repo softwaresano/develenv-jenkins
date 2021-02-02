@@ -20,7 +20,6 @@ blueocean-events.jpi
 blueocean-github-pipeline.jpi
 blueocean-git-pipeline.jpi
 blueocean-i18n.jpi
-blueocean-jira.jpi
 blueocean.jpi
 blueocean-jwt.jpi
 blueocean-personalization.jpi
@@ -35,7 +34,6 @@ bouncycastle-api.jpi
 branch-api.jpi
 build-history-metrics-plugin.jpi
 build-metrics.jpi
-build-pipeline-plugin.jpi
 build-timeout.jpi
 buildtriggerbadge.jpi
 build-user-vars-plugin.jpi
@@ -57,7 +55,6 @@ countjobs-viewstabbar.jpi
 credentials-binding.jpi
 credentials.jpi
 cron_column.jpi
-cvs.jpi
 dashboard-view.jpi
 data-tables-api.jpi
 depgraph-view.jpi
@@ -94,7 +91,6 @@ git-parameter.jpi
 git-server.jpi
 global-build-stats.jpi
 googleanalytics.jpi
-google-analytics-usage-reporter.jpi
 gradle.jpi
 gravatar.jpi
 greenballs.jpi
@@ -102,8 +98,6 @@ handlebars.jpi
 handy-uri-templates-2-api.jpi
 htmlpublisher.jpi
 http_request.jpi
-hubot-steps.jpi
-icon-shim.jpi
 jackson2-api.jpi
 javadoc.jpi
 javancss.jpi
@@ -112,9 +106,8 @@ jdepend.jpi
 jdk-tool.jpi
 jenkins-design-language.jpi
 jenkinslint.jpi
-jira.jpi
+jjwt-api.jpi
 jobConfigHistory.jpi
-job-import-plugin.jpi
 jquery3-api.jpi
 jquery-detached.jpi
 jquery.jpi
@@ -132,12 +125,10 @@ matrix-auth.jpi
 matrix-project.jpi
 maven-info.jpi
 maven-plugin.jpi
-mercurial.jpi
 metrics.jpi
 momentjs.jpi
 multi-module-tests-publisher.jpi
 naginator.jpi
-nodejs.jpi
 nodelabelparameter.jpi
 okhttp-api.jpi
 pam-auth.jpi
@@ -161,14 +152,12 @@ pipeline-utility-steps.jpi
 plain-credentials.jpi
 plot.jpi
 plugin-util-api.jpi
-poll-mailbox-trigger-plugin.jpi
 popper-api.jpi
 project-description-setter.jpi
 project-health-report.jpi
 project-stats-plugin.jpi
 promoted-builds.jpi
 pubsub-light.jpi
-release.jpi
 resource-disposer.jpi
 rich-text-publisher-plugin.jpi
 role-strategy.jpi
@@ -181,7 +170,6 @@ sidebar-link.jpi
 simple-theme-plugin.jpi
 sloccount.jpi
 snakeyaml-api.jpi
-sonar.jpi
 sounds.jpi
 sse-gateway.jpi
 ssh-agent.jpi
@@ -199,7 +187,6 @@ trilead-api.jpi
 validating-string-parameter.jpi
 variant.jpi
 view-job-filters.jpi
-violations.jpi
 warnings-ng.jpi
 windows-slaves.jpi
 workflow-aggregator.jpi
