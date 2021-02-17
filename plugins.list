@@ -159,6 +159,7 @@ resource-disposer.jpi
 rich-text-publisher-plugin.jpi
 role-strategy.jpi
 run-condition.jpi
+saml.jpi
 scm-api.jpi
 script-security.jpi
 sectioned-view.jpi
