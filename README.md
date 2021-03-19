@@ -1,5 +1,5 @@
 develenv-jenkins
 ================
 
-Jenkins for develenv in rh7
+Jenkins for develenv in rh8
 
