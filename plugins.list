@@ -38,6 +38,7 @@ build-timeout.jpi
 buildtriggerbadge.jpi
 build-user-vars-plugin.jpi
 build-with-parameters.jpi
+caffeine-api.jpi
 checks-api.jpi
 chucknorris.jpi
 cloudbees-bitbucket-branch-source.jpi
