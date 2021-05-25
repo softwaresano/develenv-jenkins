@@ -56,6 +56,7 @@ countjobs-viewstabbar.jpi
 credentials-binding.jpi
 credentials.jpi
 cron_column.jpi
+custom-view-tabs.jpi
 dashboard-view.jpi
 data-tables-api.jpi
 depgraph-view.jpi
@@ -156,6 +157,7 @@ project-health-report.jpi
 project-stats-plugin.jpi
 promoted-builds.jpi
 pubsub-light.jpi
+remote-jobs-view-plugin.jpi
 resource-disposer.jpi
 rich-text-publisher-plugin.jpi
 role-strategy.jpi
