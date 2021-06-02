@@ -128,6 +128,7 @@ metrics.jpi
 momentjs.jpi
 multi-module-tests-publisher.jpi
 naginator.jpi
+nested-view.jpi
 nodelabelparameter.jpi
 okhttp-api.jpi
 pam-auth.jpi
