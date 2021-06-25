@@ -30,6 +30,7 @@ blueocean-rest-impl.jpi
 blueocean-rest.jpi
 blueocean-web.jpi
 bootstrap4-api.jpi
+bootstrap5-api.jpi
 bouncycastle-api.jpi
 branch-api.jpi
 build-history-metrics-plugin.jpi
@@ -152,6 +153,7 @@ pipeline-utility-steps.jpi
 plain-credentials.jpi
 plot.jpi
 plugin-util-api.jpi
+popper2-api.jpi
 popper-api.jpi
 project-description-setter.jpi
 project-health-report.jpi
