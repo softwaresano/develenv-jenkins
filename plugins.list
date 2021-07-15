@@ -74,7 +74,6 @@ durable-task.jpi
 echarts-api.jpi
 email-ext.jpi
 embeddable-build-status.jpi
-emma.jpi
 emotional-jenkins-plugin.jpi
 extended-choice-parameter.jpi
 extended-read-permission.jpi
@@ -178,6 +177,7 @@ sounds.jpi
 sse-gateway.jpi
 ssh-agent.jpi
 ssh-credentials.jpi
+sshd.jpi
 ssh-slaves.jpi
 structs.jpi
 subversion.jpi
