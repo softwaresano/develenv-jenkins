@@ -38,7 +38,7 @@ jobs:
           git fetch origin --tags
           git fetch origin ${{github.head_ref}}
           git checkout ${{github.head_ref}}
-          dp_package.shi
+          dp_package.sh
       - name: Upload artifact
         uses: actions/upload-artifact@v1.0.0
         with:
