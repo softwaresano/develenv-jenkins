@@ -1,6 +1,7 @@
 #!/bin/sh
 #
-#     SUSE system statup script for Jenkins
+#     RedHat system statup script for Jenkins
+#     Based on SUSE system statup script for Jenkins
 #     Copyright (C) 2007  Pascal Bleser
 #
 #     This library is free software; you can redistribute it and/or modify it
@@ -18,6 +19,12 @@
 #     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307,
 #     USA.
 #
+###############################################################################
+#
+# chkconfig: 35 99 01
+# description: Jenkins Automation Server
+#
+###############################################################################
 ### BEGIN INIT INFO
 # Provides:          jenkins
 # Required-Start:    $local_fs $remote_fs $network $time $named
@@ -26,8 +33,8 @@
 # Should-Stop: $time sendmail
 # Default-Start:     3 5
 # Default-Stop:      0 1 2 6
-# Short-Description: Jenkins Continuous Integration Server
-# Description:       Jenkins Continuous Integration Server
+# Short-Description: Jenkins Automation Server
+# Description:       Jenkins Automation Server
 ### END INIT INFO
 
 # Check for missing binaries (stale symlinks should not happen)
@@ -46,6 +53,7 @@ test -r "$JENKINS_CONFIG" || { echo "$JENKINS_CONFIG not readable. Perhaps you f
 	else exit 6; fi; }
 
 JENKINS_PID_FILE="/var/run/jenkins.pid"
+JENKINS_LOCKFILE="/var/lock/subsys/jenkins"
 
 # Source function library.
 . /etc/init.d/functions
@@ -67,8 +75,9 @@ candidates="
 /etc/alternatives/java
 /usr/lib/jvm/java-1.8.0/bin/java
 /usr/lib/jvm/jre-1.8.0/bin/java
-/usr/lib/jvm/java-1.7.0/bin/java
-/usr/lib/jvm/jre-1.7.0/bin/java
+/usr/lib/jvm/java-11.0/bin/java
+/usr/lib/jvm/jre-11.0/bin/java
+/usr/lib/jvm/java-11-openjdk-amd64
 /usr/bin/java
 "
 for candidate in $candidates
@@ -77,18 +86,20 @@ do
   JENKINS_JAVA_CMD="$candidate"
 done
 
-JAVA_CMD="$JENKINS_JAVA_CMD $JENKINS_JAVA_OPTIONS -DJENKINS_HOME=$JENKINS_HOME -jar $JENKINS_WAR"
-PARAMS="--logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war --daemon"
+PARAMS="--logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war"
 [ -n "$JENKINS_PORT" ] && PARAMS="$PARAMS --httpPort=$JENKINS_PORT"
 [ -n "$JENKINS_LISTEN_ADDRESS" ] && PARAMS="$PARAMS --httpListenAddress=$JENKINS_LISTEN_ADDRESS"
 [ -n "$JENKINS_HTTPS_PORT" ] && PARAMS="$PARAMS --httpsPort=$JENKINS_HTTPS_PORT"
-[ -n "$JENKINS_HTTPS_KEYSTORE" ] && PARAMS="$PARAMS --httpsKeyStore=$JENKINS_HTTPS_KEYSTORE"
+[ -n "$JENKINS_HTTPS_KEYSTORE" ] && PARAMS="$PARAMS --httpsKeyStore='$JENKINS_HTTPS_KEYSTORE'"
 [ -n "$JENKINS_HTTPS_KEYSTORE_PASSWORD" ] && PARAMS="$PARAMS --httpsKeyStorePassword='$JENKINS_HTTPS_KEYSTORE_PASSWORD'"
 [ -n "$JENKINS_HTTPS_LISTEN_ADDRESS" ] && PARAMS="$PARAMS --httpsListenAddress=$JENKINS_HTTPS_LISTEN_ADDRESS"
+[ -n "$JENKINS_HTTP2_PORT" ] && PARAMS="$PARAMS --http2Port=$JENKINS_HTTP2_PORT"
+[ -n "$JENKINS_HTTP2_LISTEN_ADDRESS" ] && PARAMS="$PARAMS --http2ListenAddress=$JENKINS_HTTP2_LISTEN_ADDRESS"
 [ -n "$JENKINS_DEBUG_LEVEL" ] && PARAMS="$PARAMS --debug=$JENKINS_DEBUG_LEVEL"
 [ -n "$JENKINS_HANDLER_STARTUP" ] && PARAMS="$PARAMS --handlerCountStartup=$JENKINS_HANDLER_STARTUP"
 [ -n "$JENKINS_HANDLER_MAX" ] && PARAMS="$PARAMS --handlerCountMax=$JENKINS_HANDLER_MAX"
 [ -n "$JENKINS_HANDLER_IDLE" ] && PARAMS="$PARAMS --handlerCountMaxIdle=$JENKINS_HANDLER_IDLE"
+[ -n "$JENKINS_EXTRA_LIB_FOLDER" ] && PARAMS="$PARAMS --extraLibFolder='$JENKINS_EXTRA_LIB_FOLDER'"
 [ -n "$JENKINS_ARGS" ] && PARAMS="$PARAMS $JENKINS_ARGS"
 
 if [ "$JENKINS_ENABLE_ACCESS_LOG" = "yes" ]; then
@@ -100,7 +111,7 @@ RETVAL=0
 case "$1" in
     start)
 	echo -n "Starting Jenkins "
-	daemon --user "$JENKINS_USER" --pidfile "$JENKINS_PID_FILE" $JAVA_CMD $PARAMS > /dev/null
+	eval "daemonize -u \"$JENKINS_USER\" -p \"$JENKINS_PID_FILE\" \"$JENKINS_JAVA_CMD\" $JENKINS_JAVA_OPTIONS \"-DJENKINS_HOME=$JENKINS_HOME\" -jar \"$JENKINS_WAR\" $PARAMS"
 	RETVAL=$?
 	if [ $RETVAL = 0 ]; then
 	    success
@@ -117,6 +128,7 @@ case "$1" in
 		# found a PID
 		echo $pid > "$JENKINS_PID_FILE"
 	    done
+	    touch $JENKINS_LOCKFILE
 	else
 	    failure
 	fi
@@ -125,6 +137,7 @@ case "$1" in
     stop)
 	echo -n "Shutting down Jenkins "
 	killproc jenkins
+	rm -f $JENKINS_LOCKFILE
 	RETVAL=$?
 	echo
 	;;
