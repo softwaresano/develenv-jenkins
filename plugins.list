@@ -100,12 +100,15 @@ http_request.jpi
 jackson2-api.jpi
 javadoc.jpi
 javancss.jpi
+javax-activation-api.jpi
+javax-mail-api.jpi
 jaxb.jpi
 jdepend.jpi
 jdk-tool.jpi
 jenkins-design-language.jpi
 jenkinslint.jpi
 jjwt-api.jpi
+jnr-posix-api.jpi
 jobConfigHistory.jpi
 jquery3-api.jpi
 jquery-detached.jpi
@@ -137,6 +140,7 @@ parameterized-trigger.jpi
 performance.jpi
 pipeline-aggregator-view.jpi
 pipeline-build-step.jpi
+pipeline-github.jpi
 pipeline-github-lib.jpi
 pipeline-graph-analysis.jpi
 pipeline-input-step.jpi
@@ -154,6 +158,7 @@ plot.jpi
 plugin-util-api.jpi
 popper2-api.jpi
 popper-api.jpi
+prism-api.jpi
 project-description-setter.jpi
 project-health-report.jpi
 project-stats-plugin.jpi
