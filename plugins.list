@@ -143,6 +143,7 @@ pipeline-build-step.jpi
 pipeline-github.jpi
 pipeline-github-lib.jpi
 pipeline-graph-analysis.jpi
+pipeline-groovy-lib.jpi
 pipeline-input-step.jpi
 pipeline-milestone-step.jpi
 pipeline-model-api.jpi
@@ -201,7 +202,6 @@ windows-slaves.jpi
 workflow-aggregator.jpi
 workflow-api.jpi
 workflow-basic-steps.jpi
-workflow-cps-global-lib.jpi
 workflow-cps.jpi
 workflow-durable-task-step.jpi
 workflow-job.jpi
