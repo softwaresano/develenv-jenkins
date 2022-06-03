@@ -202,6 +202,7 @@ windows-slaves.jpi
 workflow-aggregator.jpi
 workflow-api.jpi
 workflow-basic-steps.jpi
+workflow-cps-global-lib.jpi
 workflow-cps.jpi
 workflow-durable-task-step.jpi
 workflow-job.jpi
