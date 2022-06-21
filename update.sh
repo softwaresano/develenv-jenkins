@@ -12,6 +12,6 @@ for i in $(cat plugins.list); do
   plugin=$(basename $i)
   plugin_name=${plugin/.jpi/}
   echo $plugin_name
-  echo curl -f -L -k ${jenkins_plugins_url}/${plugin/.jpi/.hpi} 
-  curl -f -L -k ${jenkins_plugins_url}/${plugin/.jpi/.hpi} > $jenkins_output_dir/$plugin || exit 1
+  echo curl --retry 5 --http1.1 -f -L -k ${jenkins_plugins_url}/${plugin/.jpi/.hpi} 
+  curl --retry 5 --http1.1 -f -L -k ${jenkins_plugins_url}/${plugin/.jpi/.hpi} > $jenkins_output_dir/$plugin || exit 1
 done;
