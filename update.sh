@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 plugins_dir=/home/develenv/app/jenkins/plugins/
 jenkins_plugins_url=https://updates.jenkins-ci.org/latest/
 jenkins_artifacts=/var/develenv/repositories/artifacts/develenv/jenkins
