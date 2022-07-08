@@ -193,6 +193,7 @@ subversion.jpi
 template-workflows.jpi
 text-finder.jpi
 thinBackup.jpi
+throttle-concurrents.jpi
 timestamper.jpi
 token-macro.jpi
 translation.jpi
