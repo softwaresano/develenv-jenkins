@@ -48,6 +48,8 @@ clover.jpi
 cobertura.jpi
 code-coverage-api.jpi
 command-launcher.jpi
+commons-lang3-api.jpi
+commons-text-api.jpi
 compact-columns.jpi
 conditional-buildstep.jpi
 config-file-provider.jpi
