@@ -1,5 +1,5 @@
 # rpmbuild -bb SPECS/jenkins.spec --define '_topdir '`pwd` -v --clean
-%define     jenkins_version 2.378
+%define     jenkins_version 2.379
 Name:       jenkins
 Version:    %{versionModule}
 Release:    %{jenkins_version}.%{releaseModule}
@@ -93,6 +93,6 @@ fi
 %{target_dir}/etc/sysconfig/jenkins
 %{target_dir}/usr/lib/jenkins/*
 %{target_dir}/etc/httpd/conf.d/*
-%config(noreplace) /etc/httpd/conf.d/develenv-jenkins.conf
-%config(noreplace) /etc/sysconfig/jenkins
+%config /etc/httpd/conf.d/develenv-jenkins.conf
+%config /etc/sysconfig/jenkins
 
