@@ -16,3 +16,4 @@ for i in $(cat plugins.list); do
   echo curl --retry 5 --http2 -f -L -k ${jenkins_plugins_url}/${plugin/.jpi/.hpi} 
   curl --retry 5 --http1.1 -f -L -k ${jenkins_plugins_url}/${plugin/.jpi/.hpi} > $jenkins_output_dir/$plugin || exit 1
 done;
+curl -L https://updates.jenkins-ci.org/download/plugins/snakeyaml-api/1.31-84.ve43da_fb_49d0b/snakeyaml-api.hpi > $jenkins_output_dir/snakeyaml-api.jpi || exit 1
