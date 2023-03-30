@@ -173,7 +173,6 @@ project-health-report.jpi
 project-stats-plugin.jpi
 promoted-builds.jpi
 pubsub-light.jpi
-remote-jobs-view-plugin.jpi
 resource-disposer.jpi
 rich-text-publisher-plugin.jpi
 role-strategy.jpi
