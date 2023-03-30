@@ -128,7 +128,6 @@ lockable-resources.jpi
 log-parser.jpi
 mailer.jpi
 mapdb-api.jpi
-mashup-portlets-plugin.jpi
 matrix-auth.jpi
 matrix-project.jpi
 maven-info.jpi
