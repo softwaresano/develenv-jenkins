@@ -128,7 +128,6 @@ lockable-resources.jpi
 log-parser.jpi
 mailer.jpi
 mapdb-api.jpi
-mashup-portlets-plugin.jpi
 matrix-auth.jpi
 matrix-project.jpi
 maven-info.jpi
@@ -174,7 +173,6 @@ project-health-report.jpi
 project-stats-plugin.jpi
 promoted-builds.jpi
 pubsub-light.jpi
-remote-jobs-view-plugin.jpi
 resource-disposer.jpi
 rich-text-publisher-plugin.jpi
 role-strategy.jpi
