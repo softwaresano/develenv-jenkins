@@ -1,5 +1,4 @@
 # rpmbuild -bb SPECS/jenkins.spec --define '_topdir '`pwd` -v --clean
-<artifactId>jenkins-war</artifactId>
 %define     jenkins_version %(grep -A1 "<artifactId>jenkins-war</artifactId>" pom.xml|tail -1|grep -Po --color=no "(?<=<version>).*(?=<)")
 Name:       jenkins
 Version:    %{versionModule}
