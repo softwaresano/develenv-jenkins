@@ -17,7 +17,8 @@
         <groupId>org.jenkins-ci.main</groupId>
         <artifactId>jenkins-war</artifactId>
         <version>2.405</version>
-        <scope>test</scope>
+        <type>war</type>
+        <scope>compile</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
