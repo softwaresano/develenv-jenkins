@@ -56,6 +56,7 @@ config-file-provider.jpi
 console-column-plugin.jpi
 copyartifact.jpi
 countjobs-viewstabbar.jpi
+coverage.jpi
 credentials-binding.jpi
 credentials.jpi
 cron_column.jpi
@@ -82,9 +83,11 @@ extended-read-permission.jpi
 external-monitor-job.jpi
 extra-columns.jpi
 favorite.jpi
+file-parameters.jpi
 font-awesome-api.jpi
 forensics-api.jpi
 git-client.jpi
+git-forensics.jpi
 github-api.jpi
 github-branch-source.jpi
 github.jpi
@@ -220,3 +223,4 @@ workflow-step-api.jpi
 workflow-support.jpi
 ws-cleanup.jpi
 xunit.jpi
+
