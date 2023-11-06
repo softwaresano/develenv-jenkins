@@ -86,6 +86,7 @@ favorite.jpi
 font-awesome-api.jpi
 forensics-api.jpi
 git-client.jpi
+git-forensics.jpi
 github-api.jpi
 github-branch-source.jpi
 github.jpi
