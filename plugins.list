@@ -97,6 +97,7 @@ global-build-stats.jpi
 gradle.jpi
 gravatar.jpi
 greenballs.jpi
+gson-api.jpi
 handlebars.jpi
 handy-uri-templates-2-api.jpi
 htmlpublisher.jpi
@@ -118,6 +119,7 @@ jenkinslint.jpi
 jjwt-api.jpi
 jnr-posix-api.jpi
 jobConfigHistory.jpi
+joda-time-api.jpi
 jquery3-api.jpi
 jquery-detached.jpi
 jquery.jpi
