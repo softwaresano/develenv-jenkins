@@ -124,6 +124,7 @@ jquery3-api.jpi
 jquery-detached.jpi
 jquery.jpi
 jsch.jpi
+json-api.jpi
 json-path-api.jpi
 jswidgets.jpi
 junit.jpi
