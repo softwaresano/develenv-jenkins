@@ -7,6 +7,7 @@ ansicolor.jpi
 antisamy-markup-formatter.jpi
 ant.jpi
 apache-httpcomponents-client-4-api.jpi
+asm-api.jpi
 audit-trail.jpi
 authentication-tokens.jpi
 blueocean-autofavorite.jpi
