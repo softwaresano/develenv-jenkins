@@ -6,7 +6,6 @@ analysis-model-api.jpi
 ansicolor.jpi
 antisamy-markup-formatter.jpi
 ant.jpi
-apache-httpcomponents-client-4-api.jpi
 apache-httpcomponents-client-5-api.jpi
 asm-api.jpi
 audit-trail.jpi
