@@ -50,6 +50,7 @@ clover.jpi
 cobertura.jpi
 code-coverage-api.jpi
 command-launcher.jpi
+commons-compress-api.jpi
 commons-lang3-api.jpi
 commons-text-api.jpi
 compact-columns.jpi
@@ -77,6 +78,7 @@ dropdown-viewstabbar-plugin.jpi
 dtkit-api.jpi
 durable-task.jpi
 echarts-api.jpi
+eddsa-api.jpi
 email-ext.jpi
 embeddable-build-status.jpi
 emotional-jenkins-plugin.jpi
@@ -85,6 +87,7 @@ extended-read-permission.jpi
 external-monitor-job.jpi
 extra-columns.jpi
 favorite.jpi
+flatpickr-api.jpi
 font-awesome-api.jpi
 forensics-api.jpi
 git-client.jpi
