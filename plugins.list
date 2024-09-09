@@ -219,7 +219,6 @@ validating-string-parameter.jpi
 variant.jpi
 view-job-filters.jpi
 warnings-ng.jpi
-windows-slaves.jpi
 workflow-aggregator.jpi
 workflow-api.jpi
 workflow-basic-steps.jpi
