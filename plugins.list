@@ -42,6 +42,7 @@ buildtriggerbadge.jpi
 build-user-vars-plugin.jpi
 build-with-parameters.jpi
 caffeine-api.jpi
+chartjs-api.jpi
 checks-api.jpi
 chucknorris.jpi
 cloudbees-bitbucket-branch-source.jpi
@@ -184,6 +185,7 @@ project-health-report.jpi
 project-stats-plugin.jpi
 promoted-builds.jpi
 pubsub-light.jpi
+report-diff.jpi
 resource-disposer.jpi
 rich-text-publisher-plugin.jpi
 role-strategy.jpi
