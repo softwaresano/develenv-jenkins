@@ -53,6 +53,7 @@ code-coverage-api.jpi
 command-launcher.jpi
 commons-compress-api.jpi
 commons-lang3-api.jpi
+commons-math3-api.jpi
 commons-text-api.jpi
 compact-columns.jpi
 conditional-buildstep.jpi
