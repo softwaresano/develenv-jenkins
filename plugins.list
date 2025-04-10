@@ -147,7 +147,6 @@ maven-plugin.jpi
 metrics.jpi
 mina-sshd-api-common.jpi
 mina-sshd-api-core.jpi
-momentjs.jpi
 multi-module-tests-publisher.jpi
 naginator.jpi
 nested-view.jpi
