@@ -104,7 +104,6 @@ gradle.jpi
 gravatar.jpi
 greenballs.jpi
 gson-api.jpi
-handlebars.jpi
 handy-uri-templates-2-api.jpi
 htmlpublisher.jpi
 http_request.jpi
