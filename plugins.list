@@ -1,5 +1,4 @@
 accelerated-build-now-plugin.jpi
-ace-editor.jpi
 active-directory.jpi
 all-changes.jpi
 analysis-model-api.jpi
@@ -105,7 +104,6 @@ gradle.jpi
 gravatar.jpi
 greenballs.jpi
 gson-api.jpi
-handlebars.jpi
 handy-uri-templates-2-api.jpi
 htmlpublisher.jpi
 http_request.jpi
@@ -133,6 +131,7 @@ jquery.jpi
 jsch.jpi
 json-api.jpi
 json-path-api.jpi
+jsoup.jpi
 jswidgets.jpi
 junit.jpi
 last-changes.jpi
@@ -148,12 +147,12 @@ maven-plugin.jpi
 metrics.jpi
 mina-sshd-api-common.jpi
 mina-sshd-api-core.jpi
-momentjs.jpi
 multi-module-tests-publisher.jpi
 naginator.jpi
 nested-view.jpi
 nodelabelparameter.jpi
 okhttp-api.jpi
+oss-symbols-api.jpi
 pam-auth.jpi
 Parameterized-Remote-Trigger.jpi
 parameterized-trigger.jpi
