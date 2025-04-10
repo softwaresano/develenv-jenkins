@@ -1,5 +1,4 @@
 accelerated-build-now-plugin.jpi
-ace-editor.jpi
 active-directory.jpi
 all-changes.jpi
 analysis-model-api.jpi
@@ -133,6 +132,7 @@ jquery.jpi
 jsch.jpi
 json-api.jpi
 json-path-api.jpi
+jsoup.jpi
 jswidgets.jpi
 junit.jpi
 last-changes.jpi
@@ -154,6 +154,7 @@ naginator.jpi
 nested-view.jpi
 nodelabelparameter.jpi
 okhttp-api.jpi
+oss-symbols-api.jpi
 pam-auth.jpi
 Parameterized-Remote-Trigger.jpi
 parameterized-trigger.jpi
