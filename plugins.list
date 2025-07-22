@@ -57,6 +57,7 @@ config-file-provider.jpi
 console-column-plugin.jpi
 copyartifact.jpi
 countjobs-viewstabbar.jpi
+coverage-badges-extension.jpi
 coverage.jpi
 credentials-binding.jpi
 credentials.jpi

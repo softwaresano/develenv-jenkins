@@ -12,7 +12,7 @@ URL:        http://jenkins-ci.org/
 Source0:    %{package_name}.war
 BuildArch:  noarch
 BuildRoot:  %{_topdir}/BUILDROOT
-Requires:   ss-develenv-user >= 33 httpd java-17-openjdk mod_proxy_html daemonize initscripts polkit
+Requires:   ss-develenv-user >= 33 httpd java-17-openjdk mod_proxy_html daemonize initscripts polkit policycoreutils
 Vendor:     softwaresano
 
 %define package_name jenkins
