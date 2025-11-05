@@ -110,6 +110,7 @@ ionicons-api.jpi
 jackson2-api.jpi
 jakarta-activation-api.jpi
 jakarta-mail-api.jpi
+jakarta-xml-bind-api.jpi
 javadoc.jpi
 javancss.jpi
 javax-activation-api.jpi
@@ -142,6 +143,7 @@ matrix-auth.jpi
 matrix-project.jpi
 maven-info.jpi
 maven-plugin.jpi
+mcp-server.jpi
 metrics.jpi
 mina-sshd-api-common.jpi
 mina-sshd-api-core.jpi
