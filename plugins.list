@@ -108,6 +108,7 @@ http_request.jpi
 instance-identity.jpi
 ionicons-api.jpi
 jackson2-api.jpi
+jackson3-api.jpi
 jakarta-activation-api.jpi
 jakarta-mail-api.jpi
 jakarta-xml-bind-api.jpi
@@ -196,6 +197,7 @@ sidebar-link.jpi
 simple-theme-plugin.jpi
 sloccount.jpi
 snakeyaml-api.jpi
+snakeyaml-engine-api.jpi
 sounds.jpi
 sse-gateway.jpi
 ssh-agent.jpi
