@@ -9,6 +9,7 @@ apache-httpcomponents-client-4-api.jpi
 apache-httpcomponents-client-5-api.jpi
 asm-api.jpi
 audit-trail.jpi
+auth-commons.jpi
 authentication-tokens.jpi
 blueocean-autofavorite.jpi
 blueocean-bitbucket-pipeline.jpi
