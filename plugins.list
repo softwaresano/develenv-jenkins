@@ -54,6 +54,7 @@ durable-task.jpi
 echarts-api.jpi
 eddsa-api.jpi
 email-ext.jpi
+embeddable-build-status.jpi
 extended-choice-parameter.jpi
 extra-columns.jpi
 favorite.jpi
@@ -91,7 +92,6 @@ junit.jpi
 lockable-resources.jpi
 mailer.jpi
 matrix-project.jpi
-mcp-server.jpi
 mina-sshd-api-common.jpi
 mina-sshd-api-core.jpi
 naginator.jpi
