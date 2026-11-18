@@ -58,6 +58,7 @@ embeddable-build-status.jpi
 extended-choice-parameter.jpi
 extra-columns.jpi
 favorite.jpi
+file-parameters.jpi
 font-awesome-api.jpi
 forensics-api.jpi
 git-client.jpi
